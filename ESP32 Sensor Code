@@ -1,0 +1,19 @@
+#define SOIL 34
+#define RELAY 25
+
+void setup() {
+  Serial.begin(115200);
+  pinMode(RELAY, OUTPUT);
+}
+
+void loop() {
+  int soilValue = analogRead(SOIL);
+
+  if (soilValue > 2500) {
+    digitalWrite(RELAY, HIGH);
+  } else {
+    digitalWrite(RELAY, LOW);
+  }
+
+  delay(2000);
+}
