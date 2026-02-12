@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Crop Monitoring</title>
+</head>
+<body>
+    <h1>🌾 AI Crop Disease Detection</h1>
+    <input type="file" id="imageUpload">
+    <button onclick="uploadImage()">Detect</button>
+    <h2 id="result"></h2>
+
+<script>
+function uploadImage() {
+    const fileInput = document.getElementById("imageUpload");
+    const formData = new FormData();
+    formData.append("image", fileInput.files[0]);
+
+    fetch("http://localhost:5000/predict", {
+        method: "POST",
+        body: formData
+    })
+    .then(res => res.json())
+    .then(data => {
+        document.getElementById("result").innerHTML =
+            "Detected: " + data.disease;
+    });
+}
+</script>
+
+</body>
+</html>
