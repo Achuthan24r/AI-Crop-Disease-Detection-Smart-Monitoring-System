@@ -1,23 +1,4 @@
-Project Structure
-AI-Crop-System/
-│
-├── app.py                # Flask AI backend
-├── crop_model.h5         # Trained TensorFlow model
-├── dashboard.html        # Web dashboard
-├── esp32_code.ino        # Sensor automation code
-├── requirements.txt
-└── README.md
 
-⚙ Installation Guide
-1️⃣ Clone the Repository
-git clone https://github.com/yourusername/AI-Crop-System.git
-cd AI-Crop-System
-
-2️⃣ Install Dependencies
-pip install tensorflow flask numpy pillow
-
-
-Or create a requirements.txt:
 
 tensorflow
 flask
