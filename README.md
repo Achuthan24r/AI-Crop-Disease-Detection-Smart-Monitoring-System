@@ -1,0 +1,1 @@
+# AI-Crop-Disease-Detection-Smart-Monitoring-System
